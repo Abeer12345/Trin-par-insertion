@@ -1,0 +1,14 @@
+PROCEDURE TriInsertion(tab: ARRAY)
+VAR
+    i,j:INTEGER
+BEGIN
+    FOR i FROM 2 TO tab.length STEP 1 DO
+        v:=tab[i]
+        j:=i
+        WHILE (tab[j-1]>v) DO
+            tab[j]:=tab[j-1]
+            j:=i-1
+        END_WHILE
+        tab[j]:=v
+    END_FOR
+END
